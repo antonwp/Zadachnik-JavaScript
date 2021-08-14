@@ -8,10 +8,13 @@
 </head>
 <body>
     <script>
-let chas = 14;
-let minuta = 22;
-let sekunda = 59;
-console.log(`${chas}:${minuta}:${sekunda}`);
+let lang = 'ru';
+let day = 4;
+let massive = {
+    ru: ['Понедельник','Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
+    en: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+};
+console.log(massive[lang][day]);
     </script>
 </body>
 </html>
