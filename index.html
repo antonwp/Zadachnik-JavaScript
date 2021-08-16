@@ -8,12 +8,21 @@
 </head>
 <body>
     <script>
-let num = 5;
-let x = 1;
-for (let i = 1; i <= num; i++) {
-    x = x * i;
+let str = "var_test_text_new_super_text";
+let indexChar;
+let getChar;
+let leftPart;
+let rightPart;
+for (let i = 0; i < str.length; i++) {
+    indexChar = str.indexOf('_');
+    if (indexChar != -1) {
+        getChar = str[indexChar+1].toUpperCase();
+        leftPart = str.substring(0, indexChar);
+        rightPart = str.substring(indexChar+2);
+        str = leftPart + getChar + rightPart;
+    }
 }
-console.log(x);
+console.log(str);
     </script>
 </body>
 </html>
