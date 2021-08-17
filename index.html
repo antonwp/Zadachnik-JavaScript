@@ -8,21 +8,11 @@
 </head>
 <body>
     <script>
-let str = "var_test_text_new_super_text";
-let indexChar;
-let getChar;
-let leftPart;
-let rightPart;
-for (let i = 0; i < str.length; i++) {
-    indexChar = str.indexOf('_');
-    if (indexChar != -1) {
-        getChar = str[indexChar+1].toUpperCase();
-        leftPart = str.substring(0, indexChar);
-        rightPart = str.substring(indexChar+2);
-        str = leftPart + getChar + rightPart;
-    }
-}
-console.log(str);
+let a = [1, 2, 3, 4, 5];
+a.splice(1, 0, 'a', 'b');
+a.splice(6, 0, 'c');
+a.splice(8, 0, 'e');
+console.log(a);
     </script>
 </body>
 </html>
