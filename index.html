@@ -8,11 +8,14 @@
 </head>
 <body>
     <script>
-let a = [1, 2, 3, 4, 5];
-a.splice(1, 0, 'a', 'b');
-a.splice(6, 0, 'c');
-a.splice(8, 0, 'e');
-console.log(a);
+let url = "http://antonwp.ru/index.html";
+let checkUrl = url.substr(-5);
+console.log(checkUrl);
+if (checkUrl == '.html') {
+	console.log('Да');
+} else {
+	console.log('Нет');
+}
     </script>
 </body>
 </html>
