@@ -8,26 +8,23 @@
 </head>
 <body>
     <script>
-function day(num) {
-    if (num == 1) {
-        return 'Понедельник';
-    } else if (num == 2) {
-        return 'Вторник';
-    } else if (num == 3) {
-        return 'Среда';
-    } else if (num == 4) {
-        return 'Четверг';
-    } else if (num == 5) {
-        return 'Пятница';
-    } else if (num == 6) {
-        return 'Суббота';
-    } else if (num == 7) {
-        return 'Воскресенье';
+let massiv = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let status = false;
+for (let i = 0; i < massiv.length; i++) {
+    if (massiv[i] == 5) {
+        status = true;
+        break;
     } else {
-        return 'Введите число от 1 до 7';
+        status = false;
     }
 }
-console.log(day(3));
+
+if (status == true) {
+    console.log('Есть');
+} else {
+    console.log('Нет');
+}
+
     </script>
 </body>
 </html>
