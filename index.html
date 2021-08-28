@@ -8,17 +8,18 @@
 </head>
 <body>
     <script>
-function getDivisors (getNum) {
-    let arr = [];
-    for (let i = 0; i <= getNum; i++) {
-        if (getNum % i == 0) {
-            arr.push(i);
-        }
+let str = '123456';
+function resortNum (stroka) {
+    let arr = stroka.split('');
+    let newArr = [];
+    for (let i = 0; i < arr.length; i = i + 2) {
+        newArr[i] = arr[i + 1];
+        newArr[i + 1] =  arr[i];
     }
-    return arr;
+    return newArr.join('');
 }
 
-console.log(getDivisors(20));
-    </script>
+console.log(resortNum(str));
+</script>
 </body>
 </html>
