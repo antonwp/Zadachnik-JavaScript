@@ -8,18 +8,24 @@
 </head>
 <body>
     <script>
-let str = '123456';
-function resortNum (stroka) {
-    let arr = stroka.split('');
-    let newArr = [];
-    for (let i = 0; i < arr.length; i = i + 2) {
-        newArr[i] = arr[i + 1];
-        newArr[i + 1] =  arr[i];
+let num = '243425985378465454';
+
+function numSum (getNum, sum) {
+    getNum = getNum.split('');
+    for (let i = 0; i < getNum.length; i++) {
+        sum = sum + Number(getNum[i]);
     }
-    return newArr.join('');
+    getNum = String(sum);
+    if (sum > 9) {
+        console.log(sum)
+        numSum(getNum, 0);
+    } else {
+        console.log(sum);
+    }
 }
 
-console.log(resortNum(str));
+numSum(num, 0);
+
 </script>
 </body>
 </html>
