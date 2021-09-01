@@ -8,24 +8,12 @@
 </head>
 <body>
     <script>
-let num = '243425985378465454';
-
-function numSum (getNum, sum) {
-    getNum = getNum.split('');
-    for (let i = 0; i < getNum.length; i++) {
-        sum = sum + Number(getNum[i]);
-    }
-    getNum = String(sum);
-    if (sum > 9) {
-        console.log(sum)
-        numSum(getNum, 0);
-    } else {
-        console.log(sum);
-    }
+let arr = [1, 2, 3, 4, 5];
+let result = 0;
+for (i = 0; i < arr.length; i++) {
+    result = result + arr[i];
 }
-
-numSum(num, 0);
-
+console.log(result/arr.length);
 </script>
 </body>
 </html>
